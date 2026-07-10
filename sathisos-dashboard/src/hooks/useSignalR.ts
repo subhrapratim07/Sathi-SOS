@@ -29,7 +29,7 @@ export const useSignalR = () => {
 
   useEffect(() => {
     const connection = new signalR.HubConnectionBuilder()
-      .withUrl('http://localhost:5017/hubs/sos')
+      .withUrl('https://sathisos-api.onrender.com/hubs/sos')
       .withAutomaticReconnect()
       .build();
 
@@ -107,7 +107,7 @@ export const useSignalR = () => {
 
     // Tell backend to notify driver phone
     try {
-      await fetch('http://localhost:5017/api/sos/accept', {
+      await fetch('https://sathisos-api.onrender.com/api/sos/accept', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ driverId, hospitalName, etaMinutes }),
