@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SathiSOS.API/SathiSOS.API.csproj" />
+    <Project Path="src/SathiSOS.Application/SathiSOS.Application.csproj" />
+    <Project Path="src/SathiSOS.Domain/SathiSOS.Domain.csproj" />
+    <Project Path="src/SathiSOS.Infrastructure/SathiSOS.Infrastructure.csproj" />
+  </Folder>
+</Solution>

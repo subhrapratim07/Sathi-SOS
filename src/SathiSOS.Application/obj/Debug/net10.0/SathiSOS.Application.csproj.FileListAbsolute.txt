@@ -1,0 +1,15 @@
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\bin\Debug\net10.0\SathiSOS.Application.deps.json
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\bin\Debug\net10.0\SathiSOS.Application.dll
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\bin\Debug\net10.0\SathiSOS.Application.pdb
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\bin\Debug\net10.0\SathiSOS.Domain.dll
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\bin\Debug\net10.0\SathiSOS.Domain.pdb
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\SathiSOS.Application.csproj.AssemblyReference.cache
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\SathiSOS.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\SathiSOS.Application.AssemblyInfoInputs.cache
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\SathiSOS.Application.AssemblyInfo.cs
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\SathiSOS.Application.csproj.CoreCompileInputs.cache
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\SathiSOS.FAE84186.Up2Date
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\SathiSOS.Application.dll
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\refint\SathiSOS.Application.dll
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\SathiSOS.Application.pdb
+C:\Users\SUBHRA\desktop\sathisos\src\SathiSOS.Application\obj\Debug\net10.0\ref\SathiSOS.Application.dll

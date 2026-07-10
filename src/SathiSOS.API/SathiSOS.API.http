@@ -1,0 +1,6 @@
+@SathiSOS.API_HostAddress = http://localhost:5017
+
+GET {{SathiSOS.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
