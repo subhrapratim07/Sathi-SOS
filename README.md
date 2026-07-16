@@ -116,7 +116,6 @@ Create `appsettings.Development.json` in `SathiSOS.API` with your own database c
 
 ---
 
-## 👤 Author
+## Author
 
-**Subhra Pratim Mondal**
-[LinkedIn](https://linkedin.com) · msubhra364@gmail.com
+**Subhra Pratim Mondal** [LinkedIn](https://www.linkedin.com/in/subhra-pratim-mondal-a522352a4/) · [@subhrapratim07](https://github.com/subhrapratim07) · msubhra364@gmail.com
