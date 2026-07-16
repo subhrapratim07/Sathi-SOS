@@ -62,5 +62,5 @@ export const HOSPITAL_COORDS: Record<string, [number, number]> = {
 
   // ---- Krishnanagar & Bongaon ----
   'Krishnanagar Sadar District Hospital':  [23.4058, 88.5023],
-  'Bongaon S.D. Hospital (Dr. J.R. Dhar)': [23.1330, 88.8270],
+  'Bongaon S.D. Hospital (Dr. J.R. Dhar)': [23.0470, 88.8195],
 };
