@@ -5,6 +5,7 @@
 Sathi-SOS is a full-stack emergency response platform that automatically detects road accidents using on-device sensor fusion (G-force, sound, and speed analysis) and instantly dispatches the nearest hospital — cutting critical response time when it matters most.
 
 🔗 **Live Dashboard:** [sathi-sos.vercel.app](https://sathi-sos.vercel.app)
+📲 **Download Mobile App (Android):** [Download APK](https://your-download-link-here.com/sathisos.apk)
 
 ---
 
