@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using NetTopologySuite.Geometries;
 using SathiSOS.API.Hubs;
 using SathiSOS.Application.DTOs;
 using SathiSOS.Application.Interfaces;
@@ -45,10 +44,13 @@ public class SosController : ControllerBase
                     Message = "No hospitals found nearby."
                 });
 
-            var driverPoint = new Point(request.Longitude, request.Latitude) { SRID = 4326 };
-            var distanceMeters = nearest.Location.Distance(driverPoint);
+            // ✅ FIXED: real-world distance via Haversine formula (meters), not raw geometry .Distance()
+            var distanceMeters = HaversineDistanceMeters(
+                request.Latitude, request.Longitude,
+                nearest.Location.Y, nearest.Location.X  // Y = latitude, X = longitude
+            );
             var distanceKm = distanceMeters / 1000.0;
-            var etaMinutes = (int)Math.Ceiling((distanceKm / 40.0) * 60);
+            var etaMinutes = Math.Max(1, (int)Math.Ceiling((distanceKm / 40.0) * 60));
 
             await _hub.Clients.All.SendAsync("SosReceived", new
             {
@@ -66,7 +68,7 @@ public class SosController : ControllerBase
                 timestamp       = DateTime.UtcNow
             });
 
-            Console.WriteLine($"SOS broadcast — Hospital: {nearest.Name}, ETA: {etaMinutes} min");
+            Console.WriteLine($"SOS broadcast — Hospital: {nearest.Name}, Distance: {distanceKm:F2} km, ETA: {etaMinutes} min");
 
             return Ok(new SosResponse
             {
@@ -158,4 +160,17 @@ public class SosController : ControllerBase
     [HttpGet("test")]
     public IActionResult Test() =>
         Ok(new { message = "API is working", timestamp = DateTime.UtcNow });
+
+    // ✅ NEW: Haversine great-circle distance calculation (returns meters)
+    private static double HaversineDistanceMeters(double lat1, double lon1, double lat2, double lon2)
+    {
+        const double R = 6371000; // Earth radius in meters
+        var dLat = (lat2 - lat1) * Math.PI / 180.0;
+        var dLon = (lon2 - lon1) * Math.PI / 180.0;
+        var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+                Math.Cos(lat1 * Math.PI / 180.0) * Math.Cos(lat2 * Math.PI / 180.0) *
+                Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+        var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+        return R * c;
+    }
 }
